@@ -3,6 +3,7 @@ import axios from 'axios'
 import "~style.css"
 import dotenv from "dotenv";
 dotenv.config();
+import { GetNation } from "~Nation";
 
 interface IpData {
   ip: string;
@@ -10,12 +11,6 @@ interface IpData {
 interface Location {
   city: string,
   country: string;
-}
-
-function GetNation(nation_code: string) {
-  const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
-  const nat =  regionNames.of(nation_code)
-  return nat;
 }
 
 function IndexPopup() {
