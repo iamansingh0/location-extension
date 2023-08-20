@@ -2,14 +2,8 @@ This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with
 
 ## Demo Video
 
-<<<<<<< HEAD
-=======
-
-
 https://github.com/iamansingh0/location-extension/assets/71139893/036deae2-83d4-496b-9678-d50a0f5b0b44
 
-
->>>>>>> 725c60470592dec9b8a92a9112d057eacbccae2c
 ## Prerequisite
 - [Node.js](https://nodejs.org/en/) 10+ (with npm) or higher version is required to run
 this project locally.
@@ -18,6 +12,12 @@ this project locally.
 npm install -g pnpm
 ```
 - Download the project locally and run *`pnpm install`* from root directory
+- Create a .env file in root directory.
+- Go to [ipinfo](https://ipinfo.io/), create a free account and get the token.
+- In .env file, create a variable named `PLASMO_PUBLIC_LOCATION_TOKEN`
+```env
+PLASMO_PUBLIC_LOCATION_TOKEN=<YOUR_IPINFO_TOKEN>
+```
 
 ## Run this project
 - First, run the development server:
