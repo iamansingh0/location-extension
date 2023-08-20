@@ -1,9 +1,7 @@
 This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
 ## Demo Video
-<p align="center">
-<img src="">
-</p>
+
 ## Prerequisite
 - [Node.js](https://nodejs.org/en/) 10+ (with npm) or higher version is required to run
 this project locally.
