@@ -4,7 +4,8 @@ import "~style.css";
 import dotenv from "dotenv";
 dotenv.config();
 import { GetNation } from "~components/Nation";
-
+import { classes } from "~components/classes";
+const { parentDivClasses, div2Classes, dataDivClasses, h2Classes, dataParentDivClasses, buttonClasses } = classes
 interface IpData {
   ip: string;
 }
@@ -12,6 +13,7 @@ interface Location {
   city: string;
   country: string;
 }
+
 
 function IndexPopup() {
   const [isLoading, setIsLoading] = useState(false);
@@ -56,32 +58,32 @@ function IndexPopup() {
     }
   };
 
+
   return (
-    <div className="plasmo-flex plasmo-items-center plasmo-justify-center plasmo-h-[500px] plasmo-w-[500px] plasmo-bg-gradient-to-br plasmo-from-[#09090F] plasmo-via-[#100F3B] plasmo-to-[#1A176E] plasmo-flex-col">
-      <div className="plasmo-absolute plasmo-top-20">
-        {locationData && (
-          <div className="plasmo-rounded-lg plasmo-border-2 plasmo-border-white plasmo-border-solid  plasmo-p-[12px] plasmo-w-[250px] plasmo-flex plasmo-flex-col plasmo-justify-center plasmo-items-center">
-            <h2 className="plasmo-text-base plasmo-text-slate-50">
-              Your country is {locationData.country}
-            </h2>
-            <h2 className="plasmo-text-base plasmo-text-slate-50">
-              and city is {locationData.city}
-            </h2>
-          </div>
-        )}
+    <div className={parentDivClasses}>
+      <div className={div2Classes}>
+        <div className={dataParentDivClasses}>
+          {locationData && (
+            <div className={dataDivClasses}>
+              <h2 className={h2Classes}>
+                Your country is {locationData.country}
+              </h2>
+              <h2 className={h2Classes}>
+                and city is {locationData.city}
+              </h2>
+            </div>
+          )}
+        </div>
+        <button
+          type="button"
+          className={buttonClasses}
+          onClick={buttonHandler}
+          name="btn1"
+          disabled={isLoading}
+        >
+          {isLoading ? "Loading..." : buttonText}
+        </button>
       </div>
-      <button
-        type="button"
-        className="plasmo-flex plasmo-flex-row plasmo-items-center plasmo-justify-center plasmo-px-4 plasmo-py-2 plasmo-text-base plasmo-transition-all plasmo-border-none
-      plasmo-shadow-lg plasmo-shadow-md plasmo-font-small plasmo-rounded plasmo-font-semibold 
-      hover:plasmo-font-bold
-      active:plasmo-scale-105 plasmo-bg-slate-50 hover:plasmo-bg-slate-100 plasmo-text-slate-800 hover:plasmo-text-slate-900 plasmo-w-[180px] plasmo-h-[40px] hover:plasmo-w-[200px] hover:plasmo-h-[50px]"
-        onClick={buttonHandler}
-        name="btn1"
-        disabled={isLoading}
-      >
-        {isLoading ? "Loading..." : buttonText}
-      </button>
     </div>
   );
 }
