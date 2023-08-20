@@ -2,16 +2,9 @@ This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with
 
 ## Demo Video
 
-<<<<<<< HEAD
-https://github.com/iamansingh0/location-extension/assets/71139893/036deae2-83d4-496b-9678-d50a0f5b0b44
-
-=======
-
 
 https://github.com/iamansingh0/location-extension/assets/71139893/036deae2-83d4-496b-9678-d50a0f5b0b44
 
-
->>>>>>> 87647d8f4e437c046b222465f059fcbab3610aa5
 ## Prerequisite
 - [Node.js](https://nodejs.org/en/) 10+ (with npm) or higher version is required to run
 this project locally.
