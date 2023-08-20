@@ -2,8 +2,6 @@ This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with
 
 ## Demo Video
 
-<<<<<<< HEAD
-=======
 
 
 https://github.com/iamansingh0/location-extension/assets/71139893/036deae2-83d4-496b-9678-d50a0f5b0b44
